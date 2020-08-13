@@ -1,0 +1,376 @@
+###############################################################################
+#                                                                             #
+# IAR ANSI C/C++ Compiler V6.70.2.6274/W32 for ARM      16/Mar/2015  23:36:17 #
+# Copyright 1999-2013 IAR Systems AB.                                         #
+#                                                                             #
+#    Cpu mode     =  thumb                                                    #
+#    Endian       =  little                                                   #
+#    Source file  =  F:\IMPOARTANT\waiting\CBY_K60\project\(DMA PDB           #
+#                    ADC)LPLD_DmaPdbADCx4\app\LPLD_DmaPdbADCx4.c              #
+#    Command line =  "F:\IMPOARTANT\waiting\CBY_K60\project\(DMA PDB          #
+#                    ADC)LPLD_DmaPdbADCx4\app\LPLD_DmaPdbADCx4.c" -D          #
+#                    LPLD_K60 -lCN "F:\IMPOARTANT\waiting\CBY_K60\project\(DM #
+#                    A PDB ADC)LPLD_DmaPdbADCx4\iar\RAM\List\" -lB            #
+#                    "F:\IMPOARTANT\waiting\CBY_K60\project\(DMA PDB          #
+#                    ADC)LPLD_DmaPdbADCx4\iar\RAM\List\" -o                   #
+#                    "F:\IMPOARTANT\waiting\CBY_K60\project\(DMA PDB          #
+#                    ADC)LPLD_DmaPdbADCx4\iar\RAM\Obj\" --no_cse --no_unroll  #
+#                    --no_inline --no_code_motion --no_tbaa --no_clustering   #
+#                    --no_scheduling --debug --endian=little --cpu=Cortex-M4  #
+#                    -e --fpu=None --dlib_config "E:\iar                      #
+#                    systems\arm\INC\c\DLib_Config_Normal.h" -I               #
+#                    "F:\IMPOARTANT\waiting\CBY_K60\project\(DMA PDB          #
+#                    ADC)LPLD_DmaPdbADCx4\iar\..\app\" -I                     #
+#                    "F:\IMPOARTANT\waiting\CBY_K60\project\(DMA PDB          #
+#                    ADC)LPLD_DmaPdbADCx4\iar\..\..\..\lib\CPU\" -I           #
+#                    "F:\IMPOARTANT\waiting\CBY_K60\project\(DMA PDB          #
+#                    ADC)LPLD_DmaPdbADCx4\iar\..\..\..\lib\common\" -I        #
+#                    "F:\IMPOARTANT\waiting\CBY_K60\project\(DMA PDB          #
+#                    ADC)LPLD_DmaPdbADCx4\iar\..\..\..\lib\LPLD\" -I          #
+#                    "F:\IMPOARTANT\waiting\CBY_K60\project\(DMA PDB          #
+#                    ADC)LPLD_DmaPdbADCx4\iar\..\..\..\lib\LPLD\HW\" -I       #
+#                    "F:\IMPOARTANT\waiting\CBY_K60\project\(DMA PDB          #
+#                    ADC)LPLD_DmaPdbADCx4\iar\..\..\..\lib\LPLD\DEV\" -I      #
+#                    "F:\IMPOARTANT\waiting\CBY_K60\project\(DMA PDB          #
+#                    ADC)LPLD_DmaPdbADCx4\iar\..\..\..\lib\uCOS-II\Ports\"    #
+#                    -I "F:\IMPOARTANT\waiting\CBY_K60\project\(DMA PDB       #
+#                    ADC)LPLD_DmaPdbADCx4\iar\..\..\..\lib\uCOS-II\Source\"   #
+#                    -I "F:\IMPOARTANT\waiting\CBY_K60\project\(DMA PDB       #
+#                    ADC)LPLD_DmaPdbADCx4\iar\..\..\..\lib\FatFs\" -I         #
+#                    "F:\IMPOARTANT\waiting\CBY_K60\project\(DMA PDB          #
+#                    ADC)LPLD_DmaPdbADCx4\iar\..\..\..\lib\FatFs\option\" -I  #
+#                    "F:\IMPOARTANT\waiting\CBY_K60\project\(DMA PDB          #
+#                    ADC)LPLD_DmaPdbADCx4\iar\..\..\..\lib\USB\common\" -I    #
+#                    "F:\IMPOARTANT\waiting\CBY_K60\project\(DMA PDB          #
+#                    ADC)LPLD_DmaPdbADCx4\iar\..\..\..\lib\USB\driver\" -I    #
+#                    "F:\IMPOARTANT\waiting\CBY_K60\project\(DMA PDB          #
+#                    ADC)LPLD_DmaPdbADCx4\iar\..\..\..\lib\USB\descriptor\"   #
+#                    -I "F:\IMPOARTANT\waiting\CBY_K60\project\(DMA PDB       #
+#                    ADC)LPLD_DmaPdbADCx4\iar\..\..\..\lib\USB\class\" -Ol    #
+#                    -I "E:\iar systems\arm\CMSIS\Include\" -D ARM_MATH_CM4   #
+#    List file    =  F:\IMPOARTANT\waiting\CBY_K60\project\(DMA PDB           #
+#                    ADC)LPLD_DmaPdbADCx4\iar\RAM\List\LPLD_DmaPdbADCx4.lst   #
+#    Object file  =  F:\IMPOARTANT\waiting\CBY_K60\project\(DMA PDB           #
+#                    ADC)LPLD_DmaPdbADCx4\iar\RAM\Obj\LPLD_DmaPdbADCx4.o      #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+F:\IMPOARTANT\waiting\CBY_K60\project\(DMA PDB ADC)LPLD_DmaPdbADCx4\app\LPLD_DmaPdbADCx4.c
+      1          /**
+      2           * --------------基于"拉普兰德K60底层库V3"的工程（LPLD_DmaPdbADCx4）-----------------
+      3           * @file LPLD_DmaPdbADCx4.c
+      4           * @version 0.1[By LPLD]
+      5           * @date 2013-10-30
+      6           * @brief 综合利用ADC、PDB、DMA模块，实现四通道AD自动连续采集，无需CPU干预，采集结果随时从内存读取
+      7           *
+      8           * 版权所有:北京拉普兰德电子技术有限公司
+      9           * 官网 http://www.lpld.cn
+     10           * 交流论坛 http://bbs.lpld.cn
+     11           * mail:support@lpld.cn
+     12           * 硬件平台:  RUSH Kinetis开发板
+     13           *
+     14           * 本工程基于"拉普兰德K60底层库V3"开发，
+     15           * 所有开源代码均在"lib"文件夹下，用户不必更改该目录下代码，
+     16           * 所有用户工程需保存在"project"文件夹下，以工程名定义文件夹名，
+     17           * 底层库使用方法见相关文档。 
+     18           *
+     19           */
+     20          #include "common.h"
+     21             
+     22          //结构体变量声明
+
+   \                                 In section .bss, align 4
+     23          GPIO_InitTypeDef gpio_init_struct;
+   \                     gpio_init_struct:
+   \   00000000                      DS8 20
+
+   \                                 In section .bss, align 4
+     24          PIT_InitTypeDef pit0_init_struct;
+   \                     pit0_init_struct:
+   \   00000000                      DS8 20
+
+   \                                 In section .bss, align 4
+     25          PIT_InitTypeDef pit1_init_struct;
+   \                     pit1_init_struct:
+   \   00000000                      DS8 20
+
+   \                                 In section .bss, align 4
+     26          ADC_InitTypeDef adc_init_struct;
+   \                     adc_init_struct:
+   \   00000000                      DS8 20
+
+   \                                 In section .bss, align 4
+     27          FTM_InitTypeDef ftm_init_struct;
+   \                     ftm_init_struct:
+   \   00000000                      DS8 28
+
+   \                                 In section .bss, align 4
+     28          DMA_InitTypeDef dma_init_struct;
+   \                     dma_init_struct:
+   \   00000000                      DS8 44
+
+   \                                 In section .bss, align 4
+     29          UART_InitTypeDef term_port_structure;
+   \                     term_port_structure:
+   \   00000000                      DS8 20
+     30          
+     31          
+     32          /**初始化gpio**/
+
+   \                                 In section .text, align 2, keep-with-next
+     33          void init_gpio()
+     34          {
+   \                     init_gpio: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+     35            // 配置0c18 1c17 rc16 ce26为GPIO功能,输出
+     36            gpio_init_struct.GPIO_PTx = PTC;      //PORTC
+   \   00000002   0x....             LDR.N    R0,??DataTable1
+   \   00000004   0x....             LDR.N    R1,??DataTable1_1  ;; 0x400ff080
+   \   00000006   0x6001             STR      R1,[R0, #+0]
+     37            gpio_init_struct.GPIO_Pins = GPIO_Pin16|GPIO_Pin17|GPIO_Pin18;     //引脚6、7
+   \   00000008   0x....             LDR.N    R0,??DataTable1
+   \   0000000A   0xF45F 0x21E0      MOVS     R1,#+458752
+   \   0000000E   0x6041             STR      R1,[R0, #+4]
+     38            gpio_init_struct.GPIO_Output=OUTPUT_L;
+   \   00000010   0x....             LDR.N    R0,??DataTable1
+   \   00000012   0x2100             MOVS     R1,#+0
+   \   00000014   0x7341             STRB     R1,[R0, #+13]
+     39            gpio_init_struct.GPIO_PinControl = IRQC_DIS;     
+   \   00000016   0x....             LDR.N    R0,??DataTable1
+   \   00000018   0x2100             MOVS     R1,#+0
+   \   0000001A   0x6081             STR      R1,[R0, #+8]
+     40            LPLD_GPIO_Init(gpio_init_struct);
+   \   0000001C   0x....             LDR.N    R1,??DataTable1
+   \   0000001E   0xB084             SUB      SP,SP,#+16
+   \   00000020   0x4668             MOV      R0,SP
+   \   00000022   0x2214             MOVS     R2,#+20
+   \   00000024   0x.... 0x....      BL       __aeabi_memcpy4
+   \   00000028   0xBC0F             POP      {R0-R3}
+   \   0000002A   0x.... 0x....      BL       LPLD_GPIO_Init
+     41            gpio_init_struct.GPIO_PTx = PTE;    
+   \   0000002E   0x....             LDR.N    R0,??DataTable1
+   \   00000030   0x....             LDR.N    R1,??DataTable1_2  ;; 0x400ff100
+   \   00000032   0x6001             STR      R1,[R0, #+0]
+     42            gpio_init_struct.GPIO_Pins = GPIO_Pin26; 
+   \   00000034   0x....             LDR.N    R0,??DataTable1
+   \   00000036   0xF05F 0x6180      MOVS     R1,#+67108864
+   \   0000003A   0x6041             STR      R1,[R0, #+4]
+     43            gpio_init_struct.GPIO_Dir = OUTPUT_L;      
+   \   0000003C   0x....             LDR.N    R0,??DataTable1
+   \   0000003E   0x2100             MOVS     R1,#+0
+   \   00000040   0x7301             STRB     R1,[R0, #+12]
+     44            gpio_init_struct.GPIO_PinControl = IRQC_DIS;   
+   \   00000042   0x....             LDR.N    R0,??DataTable1
+   \   00000044   0x2100             MOVS     R1,#+0
+   \   00000046   0x6081             STR      R1,[R0, #+8]
+     45            LPLD_GPIO_Init(gpio_init_struct);
+   \   00000048   0x....             LDR.N    R1,??DataTable1
+   \   0000004A   0xB084             SUB      SP,SP,#+16
+   \   0000004C   0x4668             MOV      R0,SP
+   \   0000004E   0x2214             MOVS     R2,#+20
+   \   00000050   0x.... 0x....      BL       __aeabi_memcpy4
+   \   00000054   0xBC0F             POP      {R0-R3}
+   \   00000056   0x.... 0x....      BL       LPLD_GPIO_Init
+     46           
+     47          
+     48          }
+   \   0000005A   0xBD01             POP      {R0,PC}          ;; return
+     49          
+
+   \                                 In section .text, align 2, keep-with-next
+     50          void DLY_ms(int ms)
+     51          {
+     52             int ii,jj;
+     53             if (ms<1) ms=1;
+   \                     DLY_ms: (+1)
+   \   00000000   0x2801             CMP      R0,#+1
+   \   00000002   0xDA00             BGE.N    ??DLY_ms_0
+   \   00000004   0x2001             MOVS     R0,#+1
+     54               for(ii=0;ii<ms;ii++)
+   \                     ??DLY_ms_0: (+1)
+   \   00000006   0x2100             MOVS     R1,#+0
+   \   00000008   0xE005             B.N      ??DLY_ms_1
+     55               for(jj=0;jj<14000;jj++);   //80MHz--1ms
+   \                     ??DLY_ms_2: (+1)
+   \   0000000A   0x1C52             ADDS     R2,R2,#+1
+   \                     ??DLY_ms_3: (+1)
+   \   0000000C   0xF243 0x63B0      MOVW     R3,#+14000
+   \   00000010   0x429A             CMP      R2,R3
+   \   00000012   0xDBFA             BLT.N    ??DLY_ms_2
+   \   00000014   0x1C49             ADDS     R1,R1,#+1
+   \                     ??DLY_ms_1: (+1)
+   \   00000016   0x4281             CMP      R1,R0
+   \   00000018   0xDA01             BGE.N    ??DLY_ms_4
+   \   0000001A   0x2200             MOVS     R2,#+0
+   \   0000001C   0xE7F6             B.N      ??DLY_ms_3
+     56          } 
+   \                     ??DLY_ms_4: (+1)
+   \   0000001E   0x4770             BX       LR               ;; return
+     57          
+     58          /********************************************************************/
+
+   \                                 In section .text, align 2, keep-with-next
+     59          void main (void)
+     60          {  
+   \                     main: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+     61            init_gpio();
+   \   00000002   0x.... 0x....      BL       init_gpio
+     62            OLED_Init();
+   \   00000006   0x.... 0x....      BL       OLED_Init
+     63            gpio_init_struct.GPIO_PTx = PTA;    
+   \   0000000A   0x....             LDR.N    R0,??DataTable1
+   \   0000000C   0x....             LDR.N    R1,??DataTable1_3  ;; 0x400ff000
+   \   0000000E   0x6001             STR      R1,[R0, #+0]
+     64            gpio_init_struct.GPIO_Pins = GPIO_Pin15; 
+   \   00000010   0x....             LDR.N    R0,??DataTable1
+   \   00000012   0xF44F 0x4100      MOV      R1,#+32768
+   \   00000016   0x6041             STR      R1,[R0, #+4]
+     65            gpio_init_struct.GPIO_Dir = OUTPUT_H;      
+   \   00000018   0x....             LDR.N    R0,??DataTable1
+   \   0000001A   0x2101             MOVS     R1,#+1
+   \   0000001C   0x7301             STRB     R1,[R0, #+12]
+     66            gpio_init_struct.GPIO_PinControl = IRQC_DIS;   
+   \   0000001E   0x....             LDR.N    R0,??DataTable1
+   \   00000020   0x2100             MOVS     R1,#+0
+   \   00000022   0x6081             STR      R1,[R0, #+8]
+     67            LPLD_GPIO_Init(gpio_init_struct);
+   \   00000024   0x....             LDR.N    R1,??DataTable1
+   \   00000026   0xB084             SUB      SP,SP,#+16
+   \   00000028   0x4668             MOV      R0,SP
+   \   0000002A   0x2214             MOVS     R2,#+20
+   \   0000002C   0x.... 0x....      BL       __aeabi_memcpy4
+   \   00000030   0xBC0F             POP      {R0-R3}
+   \   00000032   0x.... 0x....      BL       LPLD_GPIO_Init
+     68            LCD_P6x8Str(0,3,"#####################");
+   \   00000036   0x....             LDR.N    R2,??DataTable1_4
+   \   00000038   0x2103             MOVS     R1,#+3
+   \   0000003A   0x2000             MOVS     R0,#+0
+   \   0000003C   0x.... 0x....      BL       LCD_P6x8Str
+     69            LCD_P6x8Str(0,4,"#####################");      
+   \   00000040   0x....             LDR.N    R2,??DataTable1_4
+   \   00000042   0x2104             MOVS     R1,#+4
+   \   00000044   0x2000             MOVS     R0,#+0
+   \   00000046   0x.... 0x....      BL       LCD_P6x8Str
+     70            LCD_P6x8Str(0,0,"TJU Intelligent Car");
+   \   0000004A   0x....             LDR.N    R2,??DataTable1_5
+   \   0000004C   0x2100             MOVS     R1,#+0
+   \   0000004E   0x2000             MOVS     R0,#+0
+   \   00000050   0x.... 0x....      BL       LCD_P6x8Str
+     71            DLY_ms(2000);
+   \   00000054   0xF44F 0x60FA      MOV      R0,#+2000
+   \   00000058   0x.... 0x....      BL       DLY_ms
+     72            LCD_CLS();
+   \   0000005C   0x.... 0x....      BL       LCD_CLS
+     73            while(1);
+   \                     ??main_0: (+1)
+   \   00000060   0xE7FE             B.N      ??main_0
+     74          }
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1:
+   \   00000000   0x........         DC32     gpio_init_struct
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1_1:
+   \   00000000   0x400FF080         DC32     0x400ff080
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1_2:
+   \   00000000   0x400FF100         DC32     0x400ff100
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1_3:
+   \   00000000   0x400FF000         DC32     0x400ff000
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1_4:
+   \   00000000   0x........         DC32     `?<Constant "#####################">`
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1_5:
+   \   00000000   0x........         DC32     `?<Constant "TJU Intelligent Car">`
+
+   \                                 In section .rodata, align 4
+   \                     `?<Constant "#####################">`:
+   \   00000000   0x23 0x23          DC8 "#####################"
+   \              0x23 0x23    
+   \              0x23 0x23    
+   \              0x23 0x23    
+   \              0x23 0x23    
+   \              0x23 0x23    
+   \              0x23 0x23    
+   \              0x23 0x23    
+   \              0x23 0x23    
+   \              0x23 0x23    
+   \              0x23 0x00    
+   \   00000016   0x00 0x00          DC8 0, 0
+
+   \                                 In section .rodata, align 4
+   \                     `?<Constant "TJU Intelligent Car">`:
+   \   00000000   0x54 0x4A          DC8 "TJU Intelligent Car"
+   \              0x55 0x20    
+   \              0x49 0x6E    
+   \              0x74 0x65    
+   \              0x6C 0x6C    
+   \              0x69 0x67    
+   \              0x65 0x6E    
+   \              0x74 0x20    
+   \              0x43 0x61    
+   \              0x72 0x00    
+     75            
+     76          
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       0   DLY_ms
+      24   init_gpio
+         8   -> LPLD_GPIO_Init
+        24   -> __aeabi_memcpy4
+      24   main
+         8   -> DLY_ms
+         8   -> LCD_CLS
+         8   -> LCD_P6x8Str
+         8   -> LPLD_GPIO_Init
+         8   -> OLED_Init
+        24   -> __aeabi_memcpy4
+         8   -> init_gpio
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+      24  ?<Constant "#####################">
+      20  ?<Constant "TJU Intelligent Car">
+       4  ??DataTable1
+       4  ??DataTable1_1
+       4  ??DataTable1_2
+       4  ??DataTable1_3
+       4  ??DataTable1_4
+       4  ??DataTable1_5
+      32  DLY_ms
+      20  adc_init_struct
+      44  dma_init_struct
+      28  ftm_init_struct
+      20  gpio_init_struct
+      92  init_gpio
+      98  main
+      20  pit0_init_struct
+      20  pit1_init_struct
+      20  term_port_structure
+
+ 
+ 172 bytes in section .bss
+  44 bytes in section .rodata
+ 246 bytes in section .text
+ 
+ 246 bytes of CODE  memory
+  44 bytes of CONST memory
+ 172 bytes of DATA  memory
+
+Errors: none
+Warnings: none

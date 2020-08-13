@@ -1,0 +1,62 @@
+[Stack]
+FillEnabled=0
+OverflowWarningsEnabled=1
+WarningThreshold=90
+SpWarningsEnabled=1
+WarnLogOnly=1
+UseTrigger=1
+TriggerName=main
+LimitSize=0
+ByteLimit=50
+[DebugChecksum]
+Checksum=582124066
+[Exceptions]
+StopOnUncaught=_ 0
+StopOnThrow=_ 0
+[CallStack]
+ShowArgs=0
+[Disassembly]
+MixedMode=1
+[JLinkDriver]
+CStepIntDis=_ 0
+TraceBufferSize=0x00010000
+TraceStallIfFIFOFull=0x00000000
+TracePortSize=0x00000004
+[Breakpoints]
+Count=0
+[Trace1]
+Enabled=0
+ShowSource=1
+[Log file]
+LoggingEnabled=_ 0
+LogFile=_ ""
+Category=_ 0
+[TermIOLog]
+LoggingEnabled=_ 0
+LogFile=_ ""
+[CallStackLog]
+Enabled=0
+[DriverProfiling]
+Enabled=0
+Mode=1
+Graph=0
+Symbiont=0
+Exclusions=
+[Disassemble mode]
+mode=0
+[Breakpoints2]
+Bp0=_ 0 "EMUL_CODE" "{$PROJ_DIR$\..\..\..\lib\CPU\system_MK60DZ10.c}.157.4" 0 0 1 "" 0 "" 0
+Count=1
+[Aliases]
+A0=_ "C:\Users\Chen Buyun\Desktop\test code\CBY_K60_balance_DAC\lib\LPLD\HW\inv_mpu.c" ""
+A1=_ "C:\Users\ChenBuyun\Desktop\CBY_K60\lib\CPU\startup_K60.s" ""
+A2=_ "C:\Users\ChenBuyun\Desktop\CBY_K60\lib\LPLD\HW\HW_ENET.c" ""
+A3=_ "C:\Users\ChenBuyun\Desktop\CBY_K60\lib\LPLD\HW\HW_I2C.c" ""
+A4=_ "C:\Users\ChenBuyun\Desktop\CBY_K60\lib\LPLD\HW\HW_PDB.c" ""
+A5=_ "C:\Users\ChenBuyun\Desktop\CBY_K60\lib\LPLD\HW\HW_UART.c" ""
+A6=_ "C:\Users\ChenBuyun\Desktop\CBY_K60\project\(DMA PDB ADC)LPLD_DmaPdbADCx4\app\LPLD_DmaPdbADCx4.c" ""
+A7=_ "C:\Users\ChenBuyun\Desktop\dealing code\CBY_K60\lib\LPLD\HW\inv_mpu.c" ""
+A8=_ "D:\Buyun\Progress\memristor based control\mcu code\paper code\0.1ms control period\test code\CBY_K60_balance_DAC\lib\LPLD\HW\inv_mpu.c" ""
+A9=_ "F:\IMPOARTANT\waiting\CBY_K60\lib\CPU\startup_K60.s" ""
+Count=10
+SuppressDialog=1
